@@ -7,7 +7,8 @@ export const getTrwlLink = (leg: Leg): string => {
         tripID: leg.tripId,
         lineName: leg.line.name,
         start: leg.origin.id,
-        departure: leg.departure
+        departure: leg.departure,
+        destination: leg.destination.id
     }
 
     return `\n\nTräwelling-Check In: ` + base_url + new URLSearchParams(args).toString()
